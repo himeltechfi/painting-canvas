@@ -4,6 +4,7 @@
 
 Whether you're looking to doodle, test out a color, or just have some fun, **Painting Canvas** provides a straightforward and responsive canvas for your creativity.
 
+
 ## Painting Demo 
 ![Painting Canvas](https://imgur.com/EHNqJ0j.png)
 
@@ -40,8 +41,6 @@ This is a static web project, so no special server is required.
     ```
 2.  **Open the file:**
     Navigate to the project folder and open the `index.html` file in your preferred web browser (like Chrome, Firefox, or Edge).
-
----
 
 
 ## 📌 Project Status

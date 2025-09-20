@@ -1,0 +1,114 @@
+/*
+ * CSS: The project's style sheet.
+ * It defines the layout, colors, and appearance of all the elements on the page.
+ */
+
+body {
+    background-color: #5F9EA0;
+    font-family: sans-serif;
+}
+
+/* Main container for the entire application */
+#cw1MainContainer {
+    position: absolute;
+    left: 20px;
+    top: 20px;
+}
+
+/* Styling for the drawing canvas */
+canvas {
+    background-color: #fafafa;
+    border: 1px solid #a0a0a0;
+    cursor: crosshair; /* Changes the mouse cursor to a crosshair when over the canvas */
+}
+
+/* Container for all the control buttons and sliders */
+.controls-container {
+    display: flex; /* Uses Flexbox for flexible layout */
+    flex-wrap: wrap;
+    gap: 10px; /* Adds space between the buttons and other tools */
+    margin-top: 20px;
+    align-items: center; /* Vertically aligns items in the center */
+}
+
+/* Base style for all square tools (colors, blender, etc.) */
+.tool {
+    width: 45px;
+    height: 45px;
+    border: 2px solid #a0a0a0;
+    cursor: pointer;
+    background-color: #ccc;
+}
+
+.tool:hover {
+    border: 2px solid #f0f0f0;
+}
+
+/* Specific style for color selection tools */
+.color-tool {
+    border: 2px solid transparent; /* Starts with a transparent border */
+    transition: border 0.3s, box-shadow 0.3s; /* Adds a smooth animation effect */
+}
+
+/* Style for the currently active color tool */
+.color-tool.active {
+    border: 2px solid #f0f0f0;
+    box-shadow: 0 0 5px #f0f0f0;
+}
+
+/* Style for the preview boxes (current color, blender) */
+.preview-box {
+    width: 45px;
+    height: 45px;
+    border: 1px solid #a0a0a0;
+    background-color: #fff;
+}
+
+/* Style for brush size buttons */
+.brush-size-btn {
+    border: 1px solid #a0a0a0;
+    cursor: pointer;
+    background-color: #ccc;
+    transition: background-color 0.3s;
+}
+
+/* Style for the active brush size button */
+.brush-size-btn.active {
+    background-color: #fff;
+}
+
+/* Style for the mode display text */
+#mode-display {
+    font-weight: bold;
+    margin-left: auto;
+    padding: 5px 10px;
+    background-color: rgba(255, 255, 255, 0.8);
+    border-radius: 5px;
+}
+
+/* Container for the color blender sliders */
+.blend-container {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    border: 1px solid #ccc;
+    padding: 10px;
+    border-radius: 5px;
+}
+
+.color-slider {
+    width: 100px;
+}
+
+/* Style for the larger, non-square buttons like "Clear" */
+.clear-button {
+    height: 45px;
+    border: 2px solid #a0a0a0;
+    cursor: pointer;
+    background-color: #ccc;
+    padding: 0 10px;
+    white-space: nowrap; /* Prevents text from wrapping to a new line */
+    font-size: 14px;
+    line-height: 41px; /* Centers the text vertically */
+    box-sizing: border-box;
+}

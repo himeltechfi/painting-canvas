@@ -1,0 +1,53 @@
+<!doctype html>
+<html lang="en">
+	<head>
+		<title>Painting Canvas</title>
+		
+		<link rel="stylesheet" href="style.css">
+		
+	</head>
+	
+	<body>
+		<div id="cw1MainContainer">
+			<div id="cw1CanvasContainer">
+				<canvas id="cw1Canvas"></canvas>
+			</div>
+
+			<div class="controls-container">
+				<div id="colour-tools">
+					<button class="tool color-tool active" style="background-color: #0000ff;"></button>
+					<button class="tool color-tool" style="background-color: #ff0000;"></button>
+					<button class="tool color-tool" style="background-color: #008000;"></button>
+					<button class="tool color-tool" style="background-color: #483D8B;"></button>
+					<button class="tool color-tool" style="background-color: #2F4F4F;"></button>
+					<button class="tool color-tool" style="background-color: #E9967A;"></button>
+					<button class="tool color-tool" style="background-color: #800000;"></button>
+					<button class="tool color-tool" style="background-color: #800080;"></button>
+				</div>
+				
+				<div id="brush-size-tools" style="display: flex; align-items: flex-end; gap: 10px;">
+					<button class="brush-size-btn active" style="width:20px; height:20px;" data-size="10"></button>
+					<button class="brush-size-btn" style="width:30px; height:30px;" data-size="15"></button>
+					<button class="brush-size-btn" style="width:40px; height:40px;" data-size="20"></button>
+					<button class="brush-size-btn" style="width:50px; height:50px;" data-size="25"></button>
+				</div>
+
+				<button class="clear-button" id="clear-canvas-btn">Clear to Selected Color</button>
+				<button class="clear-button" id="clear-white-btn">Clear to White</button>
+				
+				<div class="blend-container">
+					<label>Color Mixer</label>
+					<label>R:<input type="range" class="color-slider" id="redValue" min="0" max="255" value="0"></label>
+					<label>G:<input type="range" class="color-slider" id="greenValue" min="0" max="255" value="0"></label>
+					<label>B:<input type="range" class="color-slider" id="blueValue" min="0" max="255" value="0"></label>
+					<div id="blendColour" class="preview-box tool"></div>
+				</div>
+
+				<div id="mode-display">PAINTING MODE</div>
+				<div id="current-color-preview" class="preview-box" style="background-color: #0000ff;"></div>
+			</div>
+		</div>
+
+		<script src="script.js"></script>
+	</body>
+</html>
